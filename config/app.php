@@ -70,7 +70,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE','UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -159,7 +159,8 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Ixudra\Curl\CurlServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -182,7 +183,20 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+        'Curl' => Ixudra\Curl\Facades\Curl::class,
+        'Str' => Illuminate\Support\Str::class,
+        'Helper' => App\Laravel\Services\Helper::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'PhoneNumber' => Propaganistas\LaravelPhone\PhoneNumber::class,
+        'ImageUploader' => App\Laravel\Services\ImageUploader::class,
+        'ImageRemover' => App\Laravel\Services\ImageRemover::class,
+        'FileUploader' => App\Laravel\Services\FileUploader::class,
+        'FileRemover' => App\Laravel\Services\FileRemover::class,
+        'FileDownloader' => App\Laravel\Services\FileDownloader::class,
+        'Carbon' => Carbon\Carbon::class,
+        'SnappyPDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        'FastExcel' => Rap2hpoutre\FastExcel\Facades\FastExcel::class,
     ])->toArray(),
 
 ];
