@@ -13,7 +13,7 @@ class Controller extends BaseController{
 
 	public function __construct(){
 		self::set_current_route();
-		//self::set_loggedin_user();
+		self::set_loggedin_user();
 		self::get_client_ip();
 	}
 
@@ -25,6 +25,15 @@ class Controller extends BaseController{
 
 	public function set_current_route(){
 		 $this->data['current_route'] = Route::currentRouteName();
+	}
+
+	public function set_loggedin_user(){
+		// consider Portal namespace will use the User model define in auth.php config file 
+		// 'web' is the declared guard for User Model in auth.php and as default guard
+		// adjust the guard "web" if necessary to other base Controller file like System namespace etc. if you'll use different Authenticable Model
+		if(auth('portal')->user()){
+        	$this->data['auth'] = auth('portal')->user();
+		}
 	}
 
     public function get_client_ip(){
