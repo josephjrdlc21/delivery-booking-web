@@ -1,30 +1,42 @@
-<?php
+<?php 
 
 namespace App\Laravel\Middlewares\Portal;
 
-use App\Providers\RouteServiceProvider;
-use Closure;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Symfony\Component\HttpFoundation\Response;
+use Closure,Auth;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Http\RedirectResponse;
 
-class RedirectIfAuthenticated
-{
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    public function handle(Request $request, Closure $next, string ...$guards): Response
-    {
-        $guards = empty($guards) ? [null] : $guards;
+class RedirectIfAuthenticated{
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
-            }
-        }
+	/**
+	 * The Guard implementation.
+	 *
+	 * @var Guard
+	 */
+	protected $auth;
 
-        return $next($request);
-    }
+	/**
+	 * Create a new filter instance.
+	 *
+	 * @param  Guard  $auth
+	 * @return void
+	 */
+	public function __construct(Guard $auth){
+		$this->auth = $auth;
+	}
+
+	/**
+	 * Handle an incoming request.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @param  \Closure  $next
+	 * @return mixed
+	 */
+	public function handle($request, Closure $next){
+		if(auth('portal')->check()){
+			return new RedirectResponse(route('portal.index'));
+		}
+
+		return $next($request);
+	}
 }

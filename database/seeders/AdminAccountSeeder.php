@@ -19,6 +19,7 @@ class AdminAccountSeeder extends Seeder
         if(!$cred){
             $user = new User;
             $user->name = "SUPER ADMIN";
+            $user->type = "master_admin";
             $user->email = "admin@gmail.com";
             $user->password = bcrypt("admin");
             $user->save();

@@ -1,7 +1,7 @@
 <div class="main-header">
     <div class="main-header-logo">
         <!-- Logo Header -->
-        <div class="logo-header" data-background-color="dark">
+        <div class="logo-header" data-background-color="white">
             <a href="#" class="logo">
                 <img src="{{asset('assets/portal/img/kaiadmin/logo_light.svg')}}" alt="navbar brand" class="navbar-brand" height="20"/>
             </a>
@@ -78,7 +78,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Account Setting</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="{{route('portal.auth.logout')}}">Logout</a>
                             </li>
                         </div>
                     </ul>

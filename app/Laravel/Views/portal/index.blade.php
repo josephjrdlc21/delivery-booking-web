@@ -1,4 +1,4 @@
-@extends('portal.layouts.main')
+@extends('portal._layouts.main')
 
 @section('breadcrumb')
 <div class="page-header">
