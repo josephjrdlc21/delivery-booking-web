@@ -15,16 +15,21 @@
                 <label for="password">Password</label>
             </div>
         </div>
-        <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="rememberme">
-            <label class="form-check-label" for="rememberme">Remember Me</label>
+        <div class="d-flex justify-content-between">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="rememberme">
+                <label class="form-check-label" for="rememberme">Remember Me</label>
+            </div>
+            <div style="margin-bottom: 0; padding: 10px">
+                <a href="#" class="link">Forgot Password?</a>
+            </div>
         </div>
         <div class="form-action mb-3">
             <button type="submit" class="btn btn-primary w-100 btn-login">Sign In</button>
         </div>
         <div class="login-account mt-5">
-            <span class="msg">Have forgot your password ?</span>
-            <a href="#" class="link">Reset It</a>
+            <span class="msg">Doesn't have an account ?</span>
+            <a href="#" class="link">Register</a>
         </div>
     </div>
 </form>
