@@ -1,9 +1,8 @@
-<!-- General CSS Files -->
-<link rel="stylesheet" href="{{asset('assets/libs/bootstrap/css/bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{asset('assets/libs/fontawesome/css/all.min.css')}}">
+<!-- Fonts and icons -->
+<script src="{{asset('assets/portal/js/webfont.js')}}"></script>
+<link rel="stylesheet" href="{{asset('assets/portal/css/fontawesome/css/all.min.css')}}">
 
-<!-- CSS Libraries -->
-
-<!-- Template CSS -->
-<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-<link rel="stylesheet" href="{{asset('assets/css/components.css')}}">
+<!-- CSS Files -->
+<link rel="stylesheet" href="{{asset('assets/portal/css/bootstrap.min.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/portal/css/plugins.min.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/portal/css/kaiadmin.min.css')}}" />

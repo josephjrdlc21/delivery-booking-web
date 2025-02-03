@@ -1,30 +1,13 @@
 @extends('errors._layouts.main')
 
 @section('content')
-<h1>500</h1>
-<div class="page-description">
-    Whoopps, server error.
-</div>
-<div class="page-search">
-    <form>              	
-        <div class="form-group floating-addon floating-addon-not-append">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">                          
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-                <input type="text" class="form-control" placeholder="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-primary btn-lg">
-                        Search
-                    </button>
-                </div>
-            </div>
-        </div>
-    </form>
-    <div class="mt-3">
-        <a href="{{route('portal.index')}}">Back to Home</a>
+<div class="d-flex flex-column align-items-center">
+    <img src="{{asset('assets/portal/img/undraw/undraw_not_found_60pq.svg')}}" width="250" alt="Page Not Found">
+    <h2 class="h1 mt-4 mb-4 fw-bold">505 Sorry! internal server error.</h2>
+    <p class="text-center op-7 mb-5 h5">Server is Under Construction. Check back later!<br></p>
+    <div>
+        <a href="{{route('portal.index')}}" class="btn btn-border btn-primary me-3">GO BACK</a>
+        <a href="{{route('portal.index')}}" class="btn btn-primary">GO TO HOME PAGE</a>
     </div>
 </div>
 @stop

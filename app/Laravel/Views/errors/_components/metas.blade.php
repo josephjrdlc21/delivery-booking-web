@@ -1,4 +1,4 @@
 <meta charset="UTF-8">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-<title>Oops!</title>
-<link rel="shortcut icon" href="{{asset('assets/img/rikdo-logo.png')}}">
+<title>Page Error</title>
+<meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
+<link rel="icon" href="{{asset('assets/portal/img/delivery_logo.png')}}" type="image/x-icon"/>

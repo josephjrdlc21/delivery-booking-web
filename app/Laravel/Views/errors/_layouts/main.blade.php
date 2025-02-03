@@ -5,17 +5,12 @@
         @include('errors._components.styles')
     </head>
     <body>
-        <div id="app">
-            <section class="section">
-                <div class="container mt-5">
-                    <div class="page-error">
-                        <div class="page-inner">
-                            @yield('content')
-                        </div>
-                    </div>
-                    @include('errors._components.footer')
+        <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    @yield('content')
                 </div>
-            </section>
+            </div>
         </div>
     </body>
     @include('errors._components.scripts')
