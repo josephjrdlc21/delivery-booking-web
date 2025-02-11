@@ -13,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+include_once app_path('Laravel/Routes/Frontend.php');
 include_once app_path('Laravel/Routes/Portal.php');
