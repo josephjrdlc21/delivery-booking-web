@@ -67,5 +67,8 @@ class Kernel extends HttpKernel
 
         'portal.auth' => \App\Laravel\Middlewares\Portal\Authenticate::class,
         'portal.guest' => \App\Laravel\Middlewares\Portal\RedirectIfAuthenticated::class,
+
+        'frontend.auth' => \App\Laravel\Middlewares\Frontend\Authenticate::class,
+        'frontend.guest' => \App\Laravel\Middlewares\Frontend\RedirectIfAuthenticated::class,
     ];
 }

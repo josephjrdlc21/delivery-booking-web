@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Laravel\Requests\Portal;
+namespace App\Laravel\Requests\Frontend;
 
 use App\Laravel\Requests\RequestManager;
 
@@ -23,7 +23,7 @@ class ChangePasswordRequest extends RequestManager
      */
     public function rules()
     {
-        $id = auth('portal')->user()->id;
+        $id = auth('web')->user()->id;
 
 		$rules = [
             'current_password' => "required|current_password:{$id}",
